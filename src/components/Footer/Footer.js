@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Footer.module.css';
 
 const Footer = () => {
 	return (
-		<footer>
+		<footer className={styles.footer}>
 			<p>
 				created by
 				<a
@@ -10,7 +11,7 @@ const Footer = () => {
 					target='_blank'
 					rel='noreferrer'
 				>
-					{' erik-ng'}
+					{' erik-ng '}
 				</a>
 				- devChallenges.io
 			</p>

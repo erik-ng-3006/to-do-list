@@ -1,5 +1,8 @@
-.header {
-	font-family: 'Raleway', sans-serif;
+.footer {
+	color: #a9a9a9;
+}
+
+.footer a {
+	color: inherit;
 	font-weight: 700;
-	font-size: 2.25rem;
 }

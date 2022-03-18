@@ -1,0 +1,13 @@
+.list-items {
+	list-style: none;
+	text-align: left;
+}
+
+.list-items li {
+	margin-bottom: 1rem;
+	font-size: 1.125rem;
+}
+
+.list-items li label {
+	margin-left: 0.5rem;
+}

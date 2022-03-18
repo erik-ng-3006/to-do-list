@@ -12,4 +12,7 @@ body {
 	color: #333;
 	font-size: 0.875rem;
 	font-family: 'Montserrat', sans-serif;
+	padding: 2rem 0;
+	display: grid;
+	place-content: center;
 }
