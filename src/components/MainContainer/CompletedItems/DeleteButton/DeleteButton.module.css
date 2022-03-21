@@ -1,0 +1,17 @@
+.btn {
+	background-color: rgb(235, 87, 87);
+	border-radius: 4px;
+	border: none;
+	color: white;
+	padding: 0.5rem 1rem;
+	font-weight: 600;
+}
+
+.icon {
+	vertical-align: middle;
+}
+
+.btn:hover {
+	cursor: pointer;
+	background-color: rgba(235, 87, 87, 0.8);
+}

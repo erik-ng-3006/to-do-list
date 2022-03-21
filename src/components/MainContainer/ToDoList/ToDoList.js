@@ -1,26 +1,39 @@
 import React from 'react';
 import styles from './ToDoList.module.css';
-const ToDoList = () => {
-	return (
-		<ul className={styles['list-items']}>
-			<li>
-				<input type='checkbox'></input>
-				<span className={styles.checkmark}></span>
-				<label>Do coding challenges</label>
-			</li>
-			<li>
-				<input type='checkbox'></input>
-				<span className={styles.checkmark}></span>
+import CheckedInput from '../../UI/CheckedInput';
 
-				<label>Do coding challenges</label>
-			</li>
-			<li>
-				<input type='checkbox'></input>
-				<span className={styles.checkmark}></span>
-				<label>Do coding challenges</label>
-			</li>
-		</ul>
-	);
+const ToDoList = (props) => {
+	let listItem;
+
+	if (props.activeFilter) {
+		listItem = props.toDos
+			.filter((todo) => todo.complete !== true)
+			.map((todo) => {
+				return (
+					<CheckedInput
+						key={todo.id}
+						id={todo.id}
+						label={todo.name}
+						complete={todo.complete}
+						toggleTodo={props.toggleTodo}
+					/>
+				);
+			});
+	} else {
+		listItem = props.toDos.map((todo) => {
+			return (
+				<CheckedInput
+					key={todo.id}
+					id={todo.id}
+					label={todo.name}
+					complete={todo.complete}
+					toggleTodo={props.toggleTodo}
+				/>
+			);
+		});
+	}
+
+	return <ul className={styles['list-items']}>{listItem}</ul>;
 };
 
 export default ToDoList;

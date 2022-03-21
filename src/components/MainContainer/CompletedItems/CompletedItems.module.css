@@ -1,0 +1,29 @@
+.list-items {
+	list-style: none;
+	text-align: left;
+	text-align: right;
+}
+
+.list-item {
+	display: flex;
+	justify-content: space-between;
+}
+
+.list-item li {
+	margin-bottom: 1rem;
+	font-size: 1.125rem;
+}
+
+.icon {
+	color: #bdbdbd;
+	transition: transform 300ms ease-out;
+}
+
+.icon:hover {
+	cursor: pointer;
+	transform: translateY(-2px);
+}
+
+.list-items .btn {
+	margin-top: 2rem;
+}

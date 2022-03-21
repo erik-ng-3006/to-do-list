@@ -13,6 +13,7 @@
 
 .main-title h2:hover {
 	cursor: pointer;
+	border-bottom: 4px solid #2f80ed;
 }
 .active {
 	padding: 0 2rem;

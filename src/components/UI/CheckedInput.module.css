@@ -1,0 +1,7 @@
+.list-item input {
+	margin-right: 0.5rem;
+}
+
+.checked {
+	text-decoration: line-through;
+}
