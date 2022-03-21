@@ -12,16 +12,6 @@ const MainContainer = () => {
 			name: 'Do Something',
 			complete: true,
 		},
-		{
-			id: 2,
-			name: 'Do Something else',
-			complete: false,
-		},
-		{
-			id: 3,
-			name: 'Do nothing',
-			complete: false,
-		},
 	]);
 	const [activeFilter, setActiveFilter] = useState(false);
 	const [shownCompleted, setShownCompleted] = useState(false);
