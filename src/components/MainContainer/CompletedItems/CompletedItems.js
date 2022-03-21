@@ -5,34 +5,39 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import DeleteButton from './DeleteButton/DeleteButton';
 
 const CompletedItems = ({ toDos, toggleTodo, setToDos }) => {
+	const listItem = toDos
+		.filter((todo) => todo.complete === true)
+		.map((todo) => {
+			return (
+				<div className={styles['list-item']} key={todo.id}>
+					<CheckedInput
+						id={todo.id}
+						label={todo.name}
+						complete={todo.complete}
+						toggleTodo={toggleTodo}
+					/>
+					<DeleteOutlineIcon
+						className={styles.icon}
+						onClick={() => {
+							console.log('clicked');
+							setToDos((prevToDos) => {
+								const newToDos = prevToDos.filter(
+									(todoItem) => todoItem.id !== todo.id
+								);
+								return newToDos;
+							});
+						}}
+					/>
+				</div>
+			);
+		});
+
+	const noTasksFound = (
+		<div className={styles['no-tasks']}>No completed tasks</div>
+	);
 	return (
 		<ul className={styles['list-items']}>
-			{toDos
-				.filter((todo) => todo.complete === true)
-				.map((todo) => {
-					return (
-						<div className={styles['list-item']} key={todo.id}>
-							<CheckedInput
-								id={todo.id}
-								label={todo.name}
-								complete={todo.complete}
-								toggleTodo={toggleTodo}
-							/>
-							<DeleteOutlineIcon
-								className={styles.icon}
-								onClick={() => {
-									setToDos((prevToDos) => {
-										const newToDos = prevToDos.filter(
-											(todoItem) =>
-												todoItem.id === todo.id
-										);
-										return newToDos;
-									});
-								}}
-							/>
-						</div>
-					);
-				})}
+			{listItem.length === 0 ? noTasksFound : listItem}
 			<DeleteButton className={styles.btn} setToDos={setToDos} />
 		</ul>
 	);

@@ -8,11 +8,13 @@
 .main-title h2 {
 	font-weight: 600;
 	font-size: 0.875rem;
+	padding: 0 2rem;
 	padding-bottom: 1rem;
 }
 
 .main-title h2:hover {
 	cursor: pointer;
+	padding: 0 2rem;
 	border-bottom: 4px solid #2f80ed;
 }
 .active {

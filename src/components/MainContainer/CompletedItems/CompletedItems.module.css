@@ -24,6 +24,10 @@
 	transform: translateY(-2px);
 }
 
+.no-tasks {
+	text-align: center;
+}
+
 .list-items .btn {
 	margin-top: 2rem;
 }

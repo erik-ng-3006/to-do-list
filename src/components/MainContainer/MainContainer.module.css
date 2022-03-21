@@ -1,3 +1,9 @@
 .main {
-	width: 610px;
+	width: 80vw;
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		width: 610px;
+	}
 }
