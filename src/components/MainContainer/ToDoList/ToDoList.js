@@ -33,6 +33,10 @@ const ToDoList = (props) => {
 		});
 	}
 
+	if (listItem.length === 0) {
+		listItem = <div className={styles.center}>No todos</div>;
+	}
+
 	return <ul className={styles['list-items']}>{listItem}</ul>;
 };
 
