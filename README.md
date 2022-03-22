@@ -50,7 +50,11 @@ This is my todo list app designed base on devchallenges.io project
 
 ## Features
 
-<!-- List the features of your application or follow the template. Don't share the figma file here :) -->
+-   [x] User story: I can add a new task
+-   [x] User story: I can complete a task
+-   [x] User story: I can toggle between All, Active and Completed
+-   [x] User story: I can remove one or all tasks under the Completed tab
+-   [x] User story: Store the data in local storage that when I refresh the page I can still see my progress
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5) was to build an application to complete the given user stories.
 
