@@ -77,4 +77,4 @@ $ npm start
 
 ## Contact
 
--   GitHub [@your-username](https://github.com/erik-ng-3006/to-do-list)
+-   GitHub [@erik-ng](https://github.com/erik-ng-3006/to-do-list)
